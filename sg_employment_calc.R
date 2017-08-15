@@ -21,7 +21,8 @@ emp <- inner_join(gdp, productivity, by=c("industry","period")) %>%
        mutate(emp = (va*10^6)/productivity) %>%
        select(industry, period, year, quarter, industry.short, emp) %>%
        group_by(industry, quarter) %>%
-       mutate(emp_change = emp - lag(emp)) %>%
+       mutate(change_emp = emp - lag(emp),
+              pct_change_emp = change_emp / lag(emp) *100) %>%
        ungroup()
 
 date <- ifelse(recent_date_gdp > recent_date_prd,
