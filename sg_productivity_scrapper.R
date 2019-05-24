@@ -2,7 +2,7 @@ library(httr)
 library(reshape2)
 library(dplyr)
 
-url  <- "http://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/13441.json"
+url  <- "https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/16065.json"
 
 raw.result <- GET(url=url)
 names(raw.result)
