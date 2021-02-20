@@ -47,7 +47,7 @@ productivity$industry.short <- plyr::revalue(productivity$industry,
                                          "Accommodation & Food Services"="Acc & Food",
                                          "Finance & Insurance"="F&I",
                                          "Information & Communications"="Infocomm",
-                                         "Business Services"="Business Ser",
+                                         '"Real Estate, Professional Services And Administrative & Support Services"'="Business Ser",
                                          "Other Services Industries"="Other Ser"))
 
 save(productivity, file=paste("data/productivity/",date,"-productivity.RData",sep=""))

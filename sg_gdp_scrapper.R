@@ -75,7 +75,7 @@ va.sector.comb$industry.short <- plyr::revalue(va.sector.comb$industry,
                                          "Accommodation & Food Services"="Acc & Food",
                                          "Finance & Insurance"="F&I",
                                          "Information & Communications"="Infocomm",
-                                         "Business Services"="Business Ser",
+                                         '"Real Estate, Professional Services And Administrative & Support Services"'="Business Ser",
                                          "Other Services Industries"="Other Ser"))
 
 save(va.sector.comb, file=paste("data/gdp/",date,"-gdp.RData",sep=""))
